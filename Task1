@@ -1,0 +1,34 @@
+let tasks = [];
+
+const addTask = function(task, callback) {
+  tasks.push(task);
+  console.log(`Task added: "${task}"`);
+  callback();
+};
+
+const printTasks = () => {
+  console.log("Current tasks:");
+  tasks.forEach((task, index) => {
+    console.log(`${index + 1}. ${task}`);
+  });
+};
+
+const addMultipleTasks = (...taskList) => {
+  taskList.forEach(task => tasks.push(task));
+  console.log(`Added ${taskList.length} tasks.`);
+  printTasks();
+};
+
+const scopeTest = () => {
+  let insideFunction = "Inside function scope";
+  console.log(insideFunction);
+  console.log(tasks);
+};
+
+let outsideFunction = "Outside global scope";
+console.log(outsideFunction);
+
+addTask("Buy groceries", printTasks);
+addTask("Finish project", printTasks);
+addMultipleTasks("Call friend", "Walk dog", "Study JavaScript");
+scopeTest();
