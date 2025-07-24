@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+          // length
+        let number=[1,2,3,4,5];
+        let names=new Array("dheekshi","dharsh");
+        console.log(names[1]);
+        console.log(names.length);
+          // filter method
+        let result=names.filter(result => names[1]);
+        console.log(result);
+        let number=[1,2,3,4,5];
+        number.splice(1,3,"heya");
+        console.log(number);
+            object 
+        let detail={
+            name:"dharsh",
+            age:"19",
+            //nested obj
+        sub: {
+            tamil: 110,
+            english:1110
+        },
+        avg: function() {
+            let sum = this.sub.tamil + this.sub.english;
+            return sum 
+        }
+    }
+        console.log(detail.age);
+        console.log(detail["name"]);
+        console.log(detail.sub.tamil);
+        console.log(detail.sub.english);
+       // key and value
+    const person={
+        name:"dharsh",
+        age:"19",
+        city:"nundhala"
+    };
+    const{name,age,city}=person
+    console.log(name);
+    console.log(age);
+    console.log(city);
+     //array
+const person=["dharsh",19,"teacher"]
+const[name,age,work]=person
+console.log(name+" "+age+" "+work);
+    </script>
+    
+</body>
+</html>
