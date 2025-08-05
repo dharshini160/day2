@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple JS Calculator</title>
+</head>
+<body>
+  <h2>Open the console to view the calculator result</h2>
+  <script>
+    let num1 = parseFloat(prompt("Enter the first number:"));
+    let num2 = parseFloat(prompt("Enter the second number:"));
+    const operations = ["Addition", "Subtraction", "Multiplication", "Division", "Modulus"];
+    var sum = num1 + num2;              
+    let difference = num1 - num2;        
+    let product = num1 * num2;
+    let division;
+    if (num2 === 0) {
+      division = "Cannot divide by zero!";
+    } else {
+      division = num1 / num2;
+    }
+    let modulus = (num2 === 0) ? "Cannot perform modulus by zero!" : num1 % num2;
+    console.log("=== Simple JavaScript Calculator ===");
+    console.log(`${operations[0]} (${num1} + ${num2}) = ${sum}`);
+    console.log(`${operations[1]} (${num1} - ${num2}) = ${difference}`);
+    console.log(`${operations[2]} (${num1} * ${num2}) = ${product}`);
+    console.log(`${operations[3]} (${num1} / ${num2}) = ${division}`);
+    console.log(`${operations[4]} (${num1} % ${num2}) = ${modulus}`);
+  </script>
