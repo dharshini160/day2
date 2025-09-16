@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // A set is a collection of unique values.It automatically removes duplicates.
+        //Syntax:
+        //let mySet = new Set([iterable]);
+
+        let email=new Set([]);
+        email.add("js@gmail.com");
+        email.add("java@gmail.com");
+        email.add("python@gmail.com");
+        console.log(email);
+        //for of
+        for(let mailid of email){
+            console.log(mailid);
+        }
+        email.forEach(x=>{
+            console.log(email)
+        })
+
+        let adminpermission =new Set(["read","write","delete"]);
+        let userpermission =new Set(["read"]);
+
+        function hasPermission(Role,Permission){
+            return Role.has(Permission)
+
+        }
+        console.log(hasPermission(adminpermission, "delete"));//true
+        console.log(hasPermission(userpermission, "delete"));//false
+        //union,intersection,difference using sets
+
+        let SetA= new Set([1,2,3,4,5,1]);
+        let SetB= new Set([6,7,8,9,2,10]);
+        let union = new Set([SetA,SetB])
+        console.log(union);
+       
+        //intersection
+        let intersection=new Set([...SetA].filter(x=>SetB.has(x)));
+        console.log(intersection)
+
+        let difference=new Set([...SetA].filter(x=>!SetB.has(x)));
+        console.log(difference)
+
+        let user1={name:"javascript"};
+        let user2={name:"python"};
+        //let map= new Map();
+        let map =new WeakMap();
+        map.set(user1,"welcome");
+        map.set(user2,"hai python");
+        console.log(map);
+        //for (let message of map.values()){
+            //console.log(message)
+       // }
+
+        
+        
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
