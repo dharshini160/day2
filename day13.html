@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try {
+            // code that may throw an error
+        } catch(error) {
+            // code to handle the error
+        } finally{
+            // code that will always execute
+        }
+        try{
+            let atmpin=2345;//2345 hard coding and != to identify the statement which is error(not equal to!=)
+            if(atmpin != 1235){
+                throw "incorrect pin"
+            }
+            console.log("logged in")
+        }
+        catch(error){
+            console.log("error"+error)
+        }
+        finally{
+            console.log("executed successfully");
+        }
+        // JSON method parse()and stringfy()
+        //parse()- convert string to object
+        //stringify()- convert object to string
+        
+        let str='{"name":"js"}';
+        console.log(str)
+        let strstred=JSON.parse(str);
+        console.log(strstred);
+
+        let obj={id:"1"}
+        let stredobj=JSON.stringify(obj);
+        console.log(stredobj)
+
+        //fetch() function,
+        //passing the URL of the JSON resource as the first argument.
+        //this returns a promise that resolver to a response object.
+
+        let sample=new Promise((resolve,reject)=>{
+            let workisdone=true;
+            if(workisdone){
+                console.log("completed")
+            }
+        })
+    </script>
+    
+</body>
+</html>
